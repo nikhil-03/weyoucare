@@ -1,0 +1,38 @@
+<%- include("header") -%> 
+
+
+ 
+
+<div class="all-post">
+<h1 class="allpost-header h1-internal">YOUR Medicines</h1>
+
+
+
+<!-- <form class="post-db-main" action="/mymedicine" method="post">
+  <div class="form-group">
+    <label class="post-label" data-aos="fade-right"> <h4>SEARCH KEYWORD</h4></label>
+    <input class="form-control" type="text" placeholder="write your KEYWORD here!" name="search" required>
+  </div> 
+  <button data-aos="fade-left" class="btn btn-block btn-dark btn-lg" type="submit" name="button"> <a class="card-link">SEARCH</a> </button>
+</form>  -->
+<!-- <h1>this is differern</h1> -->
+<%  posts.forEach(function(post){ %>
+  <% if(post.para!==Object){ %>  
+    <h1 class="medicine-blog-h1" data-aos="slide-up"> Problem:=<%=post.problem%></h1>
+    <p class="medicine-blog-para" data-aos="slide-up"> Symptoms:=<%=post.symptom%></p>
+    <p class="medicine-blog-para" data-aos="slide-up"> Medicines:=<%=post.medicine%></p>
+    <p class="medicine-blog-para" data-aos="slide-up">AGE    := <%=post.age%></p>
+
+    <form class="post-db-main" action="deletem" method="post">
+        <div class="form-group">
+        </div> 
+        <button class="btn btn-block btn-dark btn-lg" type="submit" name="theitem" value="<%=post._id%>"> <a class="card-link">CLICK HERE TO DELETE THIS POST</a> </button>
+      </form>
+
+
+    <hr class="blog-hr">
+<% }}) %>
+
+</div>
+<%- include("footer") -%> 
+

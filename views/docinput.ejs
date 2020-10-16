@@ -1,0 +1,37 @@
+<%- include("header") %> 
+    <!-- navbar only -->
+    
+
+
+<h1 class="post-blog-heading h1-internal">CREATE DOCTOR ID</h1>
+<form class="post-db-main" action="/docinput" method="post">
+  <div class="form-group">
+
+    <!-- <label class="post-label"> YOUR EMAIL</label>
+    <input class="form-control" type="email" name="email" required> -->
+
+    <label class="post-label">NAME OF DOCTOR</label>
+    <input class="form-control" type="text" name="name">
+
+    <label class="post-label">SPECIALIST IN</label>
+    <input class="form-control" type="text" name="special">
+
+    <label class="post-label">CITY</label>
+    <textarea class="form-control" name="city" rows="5" cols="30"></textarea>
+
+    <label class="post-label">AGE</label>
+    <input class="form-control" type="number" name="age">
+
+    <label class="post-label">ADDRESS</label>
+    <textarea class="form-control" name="address" rows="5" cols="30"></textarea>
+
+    <label class="post-label">PHONE NO.</label>
+    <textarea class="form-control" name="phone" rows="5" cols="30"></textarea>
+
+
+  </div>
+  <button class="btn btn-primary" type="submit" name="button">Save</button>
+</form>
+
+<%- include("footer") %> 
+

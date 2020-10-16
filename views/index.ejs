@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
+ 
+<script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
+
+
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet">
+
+        <script src="https://kit.fontawesome.com/d745d679ce.js" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+            integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+            crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+            integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+            crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+            integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+            crossorigin="anonymous"></script>
+            <link rel="stylesheet" href="css/styles.css">
+    <title>MedCare</title>
+</head>
+<body>
+    <!-- navbar only -->
+    <div class="navbar-styles">
+         <nav class="navbar navbar-expand-lg navbar-light bg-light">
+             <a class="navbar-brand" href="#">MedCare</a>
+             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01"
+                 aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+                 <span class="navbar-toggler-icon"></span>
+             </button>
+             
+             <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+                 
+                 <ul class="navbar-nav ml-auto">
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#signup">SIGN UP</a>
+              </li>
+                     <li class="nav-item active">
+                         <a class="nav-link" href="/">HOME <span class="sr-only">(current)</span></a>
+                     </li>
+                     <form action="/" method="POST">
+                        <li class="nav-item">
+                            
+                            <a class="nav-link" href="covid">COVID DATA </a>
+                        </li>
+                     </form>
+                     <li class="nav-item">
+                         <a class="nav-link" href="#footer">CONTACTS</a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link" href="blogs">COVID-BLOGS</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#doctor">DOCTOR</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="/logout">LOGOUT</a>
+                </li>
+                 </ul>
+             </div>
+         </nav>
+   </div>
+    <!-- front-top-page -->
+    <div id="index">
+      <!-- <img class="doctor-img" src="https://image.flaticon.com/icons/svg/2904/2904115.svg" alt="doctor"> -->
+<!-- /////////////////////////////////////////////////////////////////////////// -->
+      <div>
+      
+      <!-- <%  posts.forEach(function(post){ %> -->
+        <img class="doctor-img" style="border-radius: 50%;" src=<%=post.img%> alt="doctor">
+        <h3 class="index-hello" style="text-decoration: underline;"><b>Hello,<%=post.name%> </b></h3> 
+         <!-- <h1 class="all-blog-h1" data-aos="slide-up"><%=post.name%></h1> -->
+        <!-- <p class="all-blog-para" data-aos="slide-up"> <%=post.content%></p> -->
+      
+        <% }) %>
+      </div>
+<!-- ////////////////////////////////////////////////////////////////////////////////////////// -->
+      
+      <p class="index-para-r">I'm NIKHIL PRAKASH.</p>
+      <p class="index-para-l">This website lets you save your required data.</p>
+      <p class="index-para-r">The data will be saved permanently on cloud.</p>
+
+      <p class="index-para-l">You can save your Doctor's information</p>
+      <p class="index-para-r">Doctors can be searched from the doctor section</p>
+
+      <p class="index-para-l">You will be able to access data anywhere by your email id.</p>
+      <p class="index-para-r">Use accurate data for your convenience as well for others</p>
+      <!-- <p class="index-para-l"><b>So,sign up for the whole new system to keep track of yourself.</b></p> -->
+    </div>
+    
+
+
+  <!-- ADDING THE FEATURES TO THE front-top-page -->
+  <hr class="blog-hr">
+  <section id="main-features">
+
+    <h1>BLOG SECTION</h1>
+    <!-- *****************************BLOG SECTION************************** -->
+
+  <div class="row">
+
+
+     <div class="pricing-column col-lg-4 col-md-6 card-main">
+        <div class="card">
+          <div class="card-header" data-aos="fade-right">
+            <h3>BLOGS</h3>
+          </div>
+           <div class="card-body" data-aos="slide-up">
+          <h2>Write Blogs</h2>
+          <!-- <p class="main-card-para">Here you may write unlimited no. of blogs</p> -->
+          <p class="main-card-para">Blogs will be made public</p>
+          <!-- <p class="main-card-para">Blogs will be saved on DB</p> -->
+          <p class="main-card-para">You can delete a particular blog</p>
+          <p class="main-card-para">Do write the correct facts</p>
+          <button class="btn btn-block btn-dark btn-lg type="button"> <a class="card-link" href="/postblogs">......................GO......................</a> </button>
+          </div>
+        </div>
+     </div>
+
+
+     <div class="pricing-column col-lg-4 col-md-6">
+      <div class="card">
+        <div class="card-header" data-aos="fade-down">
+          <h3>BLOGS</h3>
+        </div>
+        <div class="card-body" data-aos="slide-up">
+          <h2>SEE YOUR BLOGS</h2>
+          <p class="main-card-para">See your data here</p>
+            <p class="main-card-para">Deletion is possible in this section.</p>
+            <p class="main-card-para">Please save your email id first</p>
+          <button class="btn btn-block btn-dark btn-lg type="button" href="/allblogs"> <a class="card-link" href="myblog">......................GO......................</a> </button>
+        </div>
+      </div>
+     </div>
+
+
+     <div class="pricing-column col-lg-4">
+      <div class="card">
+        <div class="card-header" data-aos="fade-left">
+          <h3>ALL BLOGS</h3>
+        </div>
+        <div class="card-body" data-aos="slide-up">
+          <h2>SEE ALL BLOGS</h2>
+          <p class="main-card-para">Read Health Related Blogs</p>
+            <!-- <p class="main-card-para">Blogs are written by the public</p> -->
+            <p class="main-card-para">Blogs are for normal/regular diseases by public</p>
+            <p class="main-card-para">You may write your own blogs too</p>
+            <!-- <p class="main-card-para">Report if you find something wrong in any post</p> -->
+          <button class="btn btn-block btn-dark btn-lg type="button" href="/allblogs"> <a class="card-link" href="/all-blogs">......................GO......................</a> </button>
+        </div>
+      </div>
+     </div>
+  </div>
+  </section>
+ <!-- *******************************************MEDICINE SECTION********************************* -->
+ <hr class="blog-hr" id="doctor">
+ <section id="main-features">
+  <h1>MEDICINE SECTION</h1>
+<div class="row" id="mydata">
+
+  <div class="pricing-column col-lg-4 col-md-6">
+    <div class="card">
+      <div class="card-header" data-aos="fade-right">
+        <h3>MEDICINES</h3>
+      </div>
+      <div class="card-body" data-aos="slide-up">
+          <h2>SAVE MEDICINES</h2>
+          <!-- <p class="main-card-para">Save your data here</p> -->
+          <p class="main-card-para">Problem Faced & symptom</p>
+          <!-- <p class="main-card-para">Symptons</p> -->
+          <p class="main-card-para">Medicines taken</p>
+          <p class="main-card-para">Reports/Final Diagnosis</p>
+          <button class="btn btn-block btn-dark btn-lg type="button"> <a class="card-link" href="/medicine-post">......................GO......................</a> </button>
+      </div>
+    </div>
+    </div>
+
+    <div class="pricing-column col-lg-4 col-md-6">
+      <div class="card">
+        <div class="card-header" data-aos="fade-down">
+          <h3>MEDICINES</h3>
+        </div>
+        <div class="card-body" data-aos="slide-up">
+            <h2>SEE YOUR MEDICINES</h2>
+            <p class="main-card-para">See your data here</p>
+            <p class="main-card-para">Deletion is possible in this section.</p>
+            <p class="main-card-para">Please save your email id first</p>
+            <button class="btn btn-block btn-dark btn-lg type="button"> <a class="card-link" href="mymedicine">......................GO......................</a> </button>
+        </div>
+      </div>
+      </div>
+
+
+  <div class="pricing-column col-lg-4 card-main">
+     <div class="card">
+       <div class="card-header" data-aos="fade-left">
+         <h3>MEDICINES</h3>
+       </div>
+        <div class="card-body" data-aos="slide-up">
+       <h2>SEE ALL MEDICINES</h2>
+       <p class="main-card-para">Here you will get all the medicines</p>
+       <p class="main-card-para">Posted by other users</p>
+       <p class="main-card-para">You may also post the same</p>
+       <button class="btn btn-block btn-dark btn-lg type="button"> <a class="card-link" href="medicines">......................GO......................</a> </button>
+       </div>
+     </div>
+  </div>
+</section>
+<!-- **********************************************************************DOCTORS SECTION************************************************************************* -->
+<hr class="blog-hr" id="doctor">
+<h1>DOCTOR SECTION</h1>
+<section id="main-features"></section>
+
+<div class="row" id="mydata">
+  <div class="pricing-column col-lg-4 col-md-6 card-main">
+     <div class="card">
+       <div class="card-header" data-aos="fade-right">
+         <h3>DOCTOR</h3>
+       </div>
+        <div class="card-body" data-aos="slide-up">
+       <h2>SAVE DOCTOR'S INFO</h2>
+       <p class="main-card-para">Create doctor's Id</p>
+       <p class="main-card-para">Post will be made public</p>
+       <p class="main-card-para">Please enter the correct data</p>
+       <button class="btn btn-block btn-dark btn-lg type="button"> <a class="card-link" href="docinput">......................GO......................</a> </button>
+       </div>
+     </div>
+  </div>
+
+<div class="pricing-column col-lg-4 col-md-6">
+ <div class="card">
+   <div class="card-header" data-aos="fade-down">
+     <h3>DOCTOR</h3>
+   </div>
+   <div class="card-body" data-aos="slide-up">
+       <h2>SEE YOUR DOCTORS</h2>
+       <p class="main-card-para">See your data here</p>
+       <p class="main-card-para">Deletion in possible in this section.</p>
+       <p class="main-card-para">Please save your email id first</p>
+       <button class="btn btn-block btn-dark btn-lg type="button"> <a class="card-link" href="mydoctor">......................GO......................</a> </button>
+   </div>
+ </div>
+ </div>
+
+
+<div class="pricing-column col-lg-4">
+ <div class="card">
+   <div class="card-header" data-aos="fade-left">
+     <h3>DOCTOR</h3>
+   </div>
+   <div class="card-body" data-aos="slide-up">
+     <h2>SEARCH ALL DOCTORS</h2>
+     <p class="main-card-para">See all Doctors here</p>
+       <p class="main-card-para">Search by keyword.</p>
+       <p class="main-card-para">Please recheck the data once</p>
+     <button class="btn btn-block btn-dark btn-lg type="button" href="/allblogs"> <a class="card-link" href="alldoctor">......................GO......................</a> </button>
+   </div>
+ </div>
+</div>
+
+
+</div>
+</section>
+  <!-- EXTRA ADDING -->
+  <!-- <div class="item" data-aos="fade-up">1</div>
+    <div class="item" data-aos="fade-down">2</div>
+    <div class="item" data-aos="fade-right">3</div>
+    <div class="item" data-aos="fade-left">4</div>
+    
+    <div class="item" data-aos="zoom-in">5</div>
+    <div class="item" data-aos="zoom-out">6</div>
+    
+    <div class="item" data-aos="slide-up">7</div>
+    
+    <div class="item" data-aos="flip-up">8</div>
+    <div class="item" data-aos="flip-down">9</div>
+    <div class="item" data-aos="flip-right">10</div>
+    <div class="item" data-aos="flip-left">11</div> -->
+
+
+    <!-- Footer -->
+    
+    <footer id="footer" >
+         <a href="https://www.facebook.com/nikhil.prakash.520/"><i data-aos="slide-up" class="social-margin fab fa-facebook-f"></i></i></a> 
+           <a href="https://twitter.com/Nikhil21994254"><i data-aos="slide-up" class="social-margin fab fa-twitter"></i> </a>
+         <a href="https://www.instagram.com/nikhilprakash2012/"><i data-aos="slide-up" class="social-margin fab fa-instagram"></i> </a>
+            <a href="https://github.com/nikhil-03"><i data-aos="slide-up" class="social-margin fab fa-github"></i> </a>
+
+        <p>© Copyright 2020 NIKHIL</p>
+    
+    </footer>
+    
+</body>
+</html>
+
+ 
+<script type="text/javascript">
+    AOS.init({
+        duration : 1200,
+    });
+ </script>

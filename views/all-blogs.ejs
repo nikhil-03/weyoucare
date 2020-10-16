@@ -1,0 +1,32 @@
+
+
+<%- include("header") %> 
+
+
+<div class="all-post">
+    <h1 class="h1-internal">ALL BLOGS</h1>
+
+
+    <form class="post-db-main" action="/all-blogs" method="post">
+        <div class="form-group">
+          <label class="post-label" data-aos="fade-right"> <h4>SEARCH KEYWORD</h4></label>
+          <input class="form-control" type="text" placeholder="write your KEYWORD here!" name="search" required>
+        </div> 
+        <button data-aos="fade-left" class="btn btn-block btn-dark btn-lg" type="submit" name="button"> <a class="card-link">SEARCH</a> </button>
+      </form> 
+
+
+
+
+<%  posts.forEach(function(post){ %>
+
+    <h1 class="all-blog-h1" data-aos="slide-up"><%=post.title%></h1>
+    <p class="all-blog-para" data-aos="slide-up"> <%=post.content%></p>
+    <hr class="blog-hr">
+
+
+    <% }) %>
+</div>
+<%- include("footer") -%> 
+
+

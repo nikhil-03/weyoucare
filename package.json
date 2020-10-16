@@ -1,0 +1,39 @@
+{
+  "name": "covid",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "engines": {
+    "node": "12.18.1"
+  },
+  "dependencies": {
+    "aos": "^2.3.4",
+    "body-parser": "^1.19.0",
+    "console": "^0.7.2",
+    "dotenv": "^8.2.0",
+    "ejs": "^3.1.3",
+    "express": "^4.17.1",
+    "express-session": "^1.17.1",
+    "mongoose": "^5.9.22",
+    "mongoose-findorcreate": "^3.0.0",
+    "passport": "^0.4.1",
+    "passport-google-oauth20": "^2.0.0",
+    "passport-local-mongoose": "^6.0.1"
+  },
+  "devDependencies": {},
+  "keywords": [],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nikhil-03/medcare.git"
+  },
+  "bugs": {
+    "url": "https://github.com/nikhil-03/medcare/issues"
+  },
+  "homepage": "https://github.com/nikhil-03/medcare#readme",
+  "description": ""
+}

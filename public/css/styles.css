@@ -1,0 +1,343 @@
+body
+{
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.safe-color
+{
+    color: green;
+}
+.danger-color
+{
+    color: red;
+}
+.normal-color
+{
+   color:  blue;
+}
+#index
+{
+    background-color: #363062;
+    text-align: center;
+    color: gray;
+    padding-bottom: 10%;
+    font-family: Montserrat;
+    font-size: 1.25rem;
+}
+#questions
+{
+    text-align: left;
+    padding-top: 5%;
+    padding-left: 5%;
+    background-color: #f7f7f7;
+    padding-bottom: 5%;
+    font-family: Merriweather;
+}
+#footer
+{
+    padding: 5%;
+    text-align: center;
+    background-color: #363062
+}
+hr
+{
+    border: dotted #eaeaea 6px;
+    border-bottom: none;
+    width: 10%;
+    margin: 30px auto 30px auto;
+}
+.question-all
+{
+    text-align: center;
+    font-size: 3.75rem;
+    font-weight: bold;
+    margin-bottom: 5%;
+}
+
+body
+{
+    
+}
+.navbar-styles
+{
+    color: blue;
+}
+
+.social-margin
+{
+    padding: 20px 10px;
+}
+input[type="checkbox"] 
+{
+  margin: 20px 20px 20px 20px;
+}
+
+/**********************************COVID SPECIFIC*****************************************************/
+.covid-page
+{
+    background-color: #363062;
+    text-align: center;
+}
+#cards
+{
+    background-color: #363062;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+}
+.covid-card
+{
+    padding: 2% 2% 2% 2%;
+}
+.covid-card-row
+{
+    padding: 2%;
+}
+.h4-font
+{
+    color: #dae1e7;
+}
+.covid-heading
+{
+    color: white;
+    padding: 3% 3% 0 3%;
+}
+.hr-covid
+{
+    border: dotted #eaeaea 6px;
+    border-bottom: none;
+    width: 10%;
+    margin: 30px auto 30px auto;
+}
+/******************************BLOG SPECIFIC*******************************************/
+.blog-body
+{
+    background-color: #363062;
+    font-family: 'Montserrat', sans-serif;
+}
+.blog-h1
+{
+    color: gray;
+    padding: 2% 3% 2% 3%;
+    font-size: 3rem;
+}
+.blog-para
+{
+    color: gray;
+    padding: 2% 20% 2% 20%;
+    font-size: 1.5rem; 
+    
+}
+.blog-hr
+{
+    border: dotted gray 6px;
+    border-bottom: none;
+    width: 10%;
+    margin: 30px auto 30px auto; 
+     
+}
+
+
+
+
+
+/*********************************ANIMATION***********************/
+@keyframes moveInLeft {
+    0% {
+      opacity: 0;
+      transform: translateX(-10rem); }
+    80% {
+      transform: translateX(1rem); }
+    100% {
+      opacity: 1;
+      transform: translate(0); } }
+  
+  @keyframes moveInRight {
+    0% {
+      opacity: 0;
+      transform: translateX(10rem); }
+    80% {
+      transform: translateX(-1rem); }
+    100% {
+      opacity: 1;
+      transform: translate(0); } }
+  
+  @keyframes moveInBottom {
+    0% {
+      opacity: 0;
+      transform: translateY(3rem); }
+    100% {
+      opacity: 1;
+      transform: translate(0); } }
+
+/*************************************INDEX PAGE************************************/
+.doctor-img
+{
+    width: 15%;
+    margin-top: 2.5%;
+    animation-name: moveInBottom;
+    animation-duration: 1s;
+}
+.index-hello
+{
+    animation-name: moveInBottom;
+    animation-duration: 1s;
+}
+.index-para-r
+{
+    animation-name: moveInRight;
+    animation-duration: 1s;
+    /* animation-delay: */
+}
+.index-para-l
+{
+    animation-name: moveInLeft;
+    animation-duration: 1s;
+}
+#main-features
+{
+    padding: 5% 0% 5% 0%;
+}
+.card
+{
+    margin: 10%;
+}
+.card-link
+{
+    text-decoration: none;
+}
+.main-card-para
+{
+    padding: 1.5%;
+}
+.social-margin:hover
+{
+    color: gray;
+}
+/***************************POST DATABSE ****************************************/
+.post-db-main
+{
+    padding: 3%;
+}
+.post-blog-heading
+{
+    text-align: center;
+    padding: 3% 3% 0% 3%;
+}
+.post-label
+{
+    padding: 2% 0 0 0 ;
+}
+/************************ALL POST***********************/
+.all-post
+{
+   background-color: #363062;
+   font-family: 'Montserrat', sans-serif;
+   text-align: center;
+   padding: 1% 1% 5% 1%;
+}
+.all-blog-para
+{
+    
+    color: gray;
+    text-transform: capitalize;
+}
+.all-blog-h1
+{
+  color: gray;
+  text-transform: capitalize;
+}
+.allpost-header
+{
+    padding: 3%;
+}
+/*************************************medicine posts********************************************************/
+.medicine-blog-para
+{
+    text-align: left;
+    color: gray;
+    font-size: 2rem;
+}
+.medicine-blog-h1
+{
+    text-align: left;
+    color: gray;
+}
+
+
+@media (max-width:800px)
+{
+    .blog-para
+    {
+       font-size: 1rem;
+       padding: 0% 1% 0% 1%;
+    }
+    .blog-h1
+    {
+        font-size: 1.5rem;
+        padding: 1%;
+    }
+}
+@media (max-width:800px)
+{
+    .all-blog-para
+    {
+       font-size: 1rem;
+       padding: 0% 1% 0% 1%;
+    }
+    .all-blog-h1
+    {
+        font-size: 1.5rem;
+        padding: 1%;
+    }
+}
+@media (max-width:800px)
+{
+    .medicine-blog-para
+    {
+       font-size: 1rem;
+       padding: 0% 1% 0% 1%;
+    }
+    .medicine-blog-h1
+    {
+        font-size: 1.5rem;
+        padding: 1%;
+    }
+    .click-del
+    {
+        font-size: .5rem;
+    }
+    .login-para
+    {
+    padding: 0% 0 0 0%;
+    }
+    .index-para-r
+    {
+       font-size: 1rem;
+    }
+    .index-para-l
+    {
+    font-size: 1rem;
+    }
+}
+
+.h1-internal
+{
+    color: grey;
+}
+
+#login{
+    text-align: center;
+}
+.login-main
+{
+    padding: 5%;
+}
+.profile-pic {
+    border-radius: 50%;
+    margin-bottom: 5%;
+  }
+.login-para
+{
+    padding: 0% 25% 0 25%;
+}

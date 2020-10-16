@@ -1,0 +1,42 @@
+<%- include("header") -%> 
+
+
+    <!-- navbar only -->
+    
+
+<div class="all-post">
+<h1 class="h1-internal">ALL Medicines</h1>
+
+
+
+    <form class="post-db-main" action="/medicines" method="post">
+      <div class="form-group">
+        <label class="post-label" data-aos="fade-right"> <h4>SEARCH KEYWORD</h4></label>
+        <input class="form-control" type="text" placeholder="write your KEYWORD here!" name="search" required>
+      </div> 
+      <button data-aos="fade-left" class="btn btn-block btn-dark btn-lg" type="submit" name="button"> <a class="card-link">SEARCH</a> </button>
+    </form> 
+   
+
+
+
+
+
+<%  posts.forEach(function(post){ %>
+  <% if(post.para!==Object){ %>  
+    <h1 class="medicine-blog-h1" data-aos="slide-up"> Problem:=<%=post.problem%></h1>
+    <p class="medicine-blog-para" data-aos="slide-up"> Symptoms:=<%=post.symptom%></p>
+    <p class="medicine-blog-para" data-aos="slide-up"> Medicines:=<%=post.medicine%></p>
+    <p class="medicine-blog-para" data-aos="slide-up">AGE    := <%=post.age%></p>
+    <hr class="blog-hr">
+<% }}) %>
+
+<!-- <% for(let i=0;i<posts.length;i++){ %> 
+    <% if(posts[i].para!=Object){ %> 
+        <h1 class="all-blog-h1" data-aos="slide-up"> Problem:<%=posts[i].title%></h1>
+<% }} %>  -->
+
+</div>
+<%- include("footer") -%> 
+
+
