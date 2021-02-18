@@ -89,8 +89,9 @@ passport.use(new GoogleStrategy({
     clientID: process.env.CLIENT_ID,
     clientSecret: process.env.CLIENT_SECRET,
     callbackURL: "https://weyoucare.herokuapp.com/auth/google/weyoucare",
-    // callbackURL :  "http://localhost:3000/auth/google/localcart",
+    // callbackURL :  "http://localhost:3000/auth/google/weyoucare",
     userProfileURL: 'https://www.googleapis.com/oauth2/v3/userinfo'
+    // userProfileURL: 'http://localhost:3000/oauth2/v3/userinfo'
   },
   function(accessToken, refreshToken, profile, cb)    {
       // console.log(profile.photos[0].value);
@@ -124,26 +125,26 @@ app.get("/auth/google/weyoucare",
 
 app.get("/secrets",function(req,res){
   //  console.log(req.user.id);
- const url="https://api.covidindiatracker.com/state_data.json";
-    https.get(url, function(response){
-        var body = '';
-     response.on('data', function(chunk){
-            body += chunk;
-        });
-      response.on('end', function()
-      {
-            var covidData = JSON.parse(body);
-            for(let i=0;i<35;i++)
-            {
-            states.push(covidData[i].state);
-            statesActive.push(covidData[i].active);
-            statesRecover.push(covidData[i].recovered);
-            statesDeaths.push(covidData[i].deaths);
-            }
-      });
-    }).on('error', function(e){
-          console.log("Got an error: ", e);
-    });
+//  const url="https://api.covidindiatracker.com/state_data.json";
+//     https.get(url, function(response){
+//         var body = '';
+//      response.on('data', function(chunk){
+//             body += chunk;
+//         });
+//       response.on('end', function()
+//       {
+//             var covidData = JSON.parse(body);
+//             for(let i=0;i<35;i++)
+//             {
+//             states.push(covidData[i].state);
+//             statesActive.push(covidData[i].active);
+//             statesRecover.push(covidData[i].recovered);
+//             statesDeaths.push(covidData[i].deaths);
+//             }
+//       });
+//     }).on('error', function(e){
+//           console.log("Got an error: ", e);
+//     });
     if(req.isAuthenticated()){
       // res.sendFile(__dirname+"/index.html");
       console.log(req.user.id);
@@ -207,33 +208,33 @@ app.get("/blogs",function(req,res){
 //    });
 // }); 
 
-app.get("/covid",function(req,res){
-    const url="https://api.covidindiatracker.com/state_data.json";
-    https.get(url, function(response){
-        var body = '';
-     response.on('data', function(chunk){
-            body += chunk;
-        });
-      response.on('end', function()
-      {
-            var covidData = JSON.parse(body);
-            for(let i=0;i<35;i++)
-            {
-            states.push(covidData[i].state);
-            statesActive.push(covidData[i].active);
-            statesRecover.push(covidData[i].recovered);
-            statesDeaths.push(covidData[i].deaths);
-            }
-      });
-    }).on('error', function(e){
-          console.log("Got an error: ", e);
-    });
-  res.render("list",{
-    state:states,
-    active:statesActive,
-    recover:statesRecover,
-    death:statesDeaths});
-});
+// app.get("/covid",function(req,res){
+    // const url="https://api.covidindiatracker.com/state_data.json";
+    // https.get(url, function(response){
+    //     var body = '';
+    //  response.on('data', function(chunk){
+    //         body += chunk;
+    //     });
+    //   response.on('end', function()
+    //   {
+    //         var covidData = JSON.parse(body);
+    //         for(let i=0;i<35;i++)
+    //         {
+    //         states.push(covidData[i].state);
+    //         statesActive.push(covidData[i].active);
+    //         statesRecover.push(covidData[i].recovered);
+    //         statesDeaths.push(covidData[i].deaths);
+    //         }
+    //   });
+    // }).on('error', function(e){
+    //       console.log("Got an error: ", e);
+    // });
+//   res.render("list",{
+//     state:states,
+//     active:statesActive,
+//     recover:statesRecover,
+//     death:statesDeaths});
+// });
 // *****************HERE ARE COVID-BLOGS,COVID-DATA AND INDEX PAGE  "ENDSS"   *************************//
 // app.get("/docinput",function(req,res){
 //   res.render("docinput");
